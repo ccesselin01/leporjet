@@ -1,0 +1,27 @@
+Devis de revêtements
+
+______________________________________________________________________
+
+Revêtement : Peinture 29.9     Coût : 59,80 euros
+
+Revêtement : Plaquettes de parement     Coût : 30,40 euros
+
+Revêtement : Carrelage grands carreaux     Coût : 357,80 euros
+
+Revêtement : Papier peint     Coût : 65,80 euros
+
+Revêtement : Bardage Meleze     Coût : 24,55 euros
+
+Revêtement : Liege     Coût : 50,80 euros
+
+Revêtement : Marbre     Coût : 195,70 euros
+
+Revêtement : Lambris Chene     Coût : 50,60 euros
+
+Revêtement : Lambris Sapin     Coût : 85,00 euros
+
+Revêtement : dale sur plot     Coût : 221,56 euros
+
+______________________________________________________________________
+
+Coût total : 1142,01 euros
