@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.insa.trelange</groupId>
-    <artifactId>ProjetInfo_S2</artifactId>
+    <groupId>com.insa.ccesselin</groupId>
+    <artifactId>ProjetInfo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
@@ -49,7 +49,7 @@
                     <noHeaderFiles>true</noHeaderFiles>
                     <stripDebug>true</stripDebug>
                     <noManPages>true</noManPages>
-                    <mainClass>com.insa.trelange.interfacegraphique.Main</mainClass>
+                    <mainClass>com.insa.ccesselin.interfacegraphique.Main</mainClass>
                     <launcher>ProjetInfo_S2</launcher>
                     <jlinkImageName>ProjetInfo_S2</jlinkImageName>
 <!-- pour zipper le dossier image
@@ -84,4 +84,5 @@
         
 
     </build>
+    <name>ProjetInfo</name>
 </project>
