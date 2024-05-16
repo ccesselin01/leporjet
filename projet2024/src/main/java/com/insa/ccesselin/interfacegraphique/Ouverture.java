@@ -85,7 +85,7 @@ public class Ouverture extends Application{
         HBox buttonContainer = new HBox();
         buttonContainer.setSpacing(30); // Espacement entre les boutons
         buttonContainer.setAlignment(Pos.CENTER); // Centrage horizontal des boutons
-        buttonContainer.getChildren().addAll(bNouveau, bOuvrir);
+        buttonContainer.getChildren().addAll(bNouveau, bOuvrir); // enlever le bOuvrir pour enlever le bouton
 
         // Création du conteneur principal VBox
         VBox root = new VBox();
@@ -96,11 +96,11 @@ public class Ouverture extends Application{
         scene = new Scene(root, 900, 600);
         // Lier la largeur des boutons à la largeur de la fenêtre
         bNouveau.prefWidthProperty().bind(scene.widthProperty().divide(2));
-        bOuvrir.prefWidthProperty().bind(scene.widthProperty().divide(2));
+        bOuvrir.prefWidthProperty().bind(scene.widthProperty().divide(2));//texte dans le bouton
 
         // Lier la hauteur des boutons à la hauteur de la fenêtre
         bNouveau.prefHeightProperty().bind(scene.heightProperty().divide(6));
-        bOuvrir.prefHeightProperty().bind(scene.heightProperty().divide(6));
+        bOuvrir.prefHeightProperty().bind(scene.heightProperty().divide(6)); // hauteur du bouton
 
         // Configuration de la scène et affichage de la fenêtre
         
