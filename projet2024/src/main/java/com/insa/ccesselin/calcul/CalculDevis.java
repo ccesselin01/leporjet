@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  *
- * @author 
+ * @author ccesselin
  */
 
 public class CalculDevis {
