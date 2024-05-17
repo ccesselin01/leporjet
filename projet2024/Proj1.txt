@@ -1,5 +1,0 @@
-Sauvegarde du Projet
-
-Coin Coin 0 10.0 10.0
-Coin Coin 1 100.0 100.0
-Mur Mur 0 Coin 0 10.0 10.0 Coin 1 100.0 100.0 32 2.0
