@@ -16,10 +16,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with CoursBeuvron.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.insa.ccesselin.interfacegraphique;
+package com.insa.ccesselin01.interfacegraphique;
 
-import com.insa.ccesselin.calcul.Batiment;
-import com.insa.ccesselin.calcul.Coin;
+import com.insa.ccesselin01.calcul.Batiment;
+import com.insa.ccesselin01.calcul.Coin;
 import java.text.DecimalFormat;
 import java.text.ParsePosition;
 import java.util.function.UnaryOperator;
@@ -45,7 +45,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author 
+ * @author ccesselin01
  */
 public class AjoutCoin extends Application {
 

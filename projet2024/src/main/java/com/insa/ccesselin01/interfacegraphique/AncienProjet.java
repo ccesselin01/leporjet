@@ -16,11 +16,11 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with CoursBeuvron.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.insa.ccesselin.interfacegraphique;
+package com.insa.ccesselin01.interfacegraphique;
 
 /**
  *
- * @author 
+ * @author ccesselin01
  */
 
 import javafx.application.Application;

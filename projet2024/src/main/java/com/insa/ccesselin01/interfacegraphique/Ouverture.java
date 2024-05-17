@@ -1,4 +1,4 @@
-package com.insa.ccesselin.interfacegraphique;
+package com.insa.ccesselin01.interfacegraphique;
 
 
 import javafx.application.Application;
@@ -17,10 +17,10 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author tomrelange
+ * @author jjuif01
  */
-import com.insa.ccesselin.calcul.Revetement;
-import com.insa.ccesselin.calcul.RevetementDatabase;
+import com.insa.ccesselin01.calcul.Revetement;
+import com.insa.ccesselin01.calcul.RevetementDatabase;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

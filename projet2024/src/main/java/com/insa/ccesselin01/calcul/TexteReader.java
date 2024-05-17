@@ -1,8 +1,8 @@
-package com.insa.ccesselin.calcul;
+package com.insa.ccesselin01.calcul;
 
 /**
  *
- * @author 
+ * @author ccesselin01
  */
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

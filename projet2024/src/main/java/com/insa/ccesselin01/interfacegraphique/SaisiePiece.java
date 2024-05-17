@@ -16,13 +16,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with CoursBeuvron.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.insa.ccesselin.interfacegraphique;
+package com.insa.ccesselin01.interfacegraphique;
 
-import com.insa.ccesselin.calcul.Mur;
-import com.insa.ccesselin.calcul.Piece;
-import com.insa.ccesselin.calcul.Plafond;
-import com.insa.ccesselin.calcul.Revetement;
-import com.insa.ccesselin.calcul.Sol;
+import com.insa.ccesselin01.calcul.Mur;
+import com.insa.ccesselin01.calcul.Piece;
+import com.insa.ccesselin01.calcul.Plafond;
+import com.insa.ccesselin01.calcul.Revetement;
+import com.insa.ccesselin01.calcul.Sol;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -45,7 +45,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author 
+ * @author ccesselin01
  */
 public class SaisiePiece extends Application{
     

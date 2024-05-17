@@ -10,7 +10,7 @@
                 <goal>javafx:run</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath com.insa.trelange.interfacegraphiccompo.TestFx</exec.args>
+                <exec.args>-classpath %classpath com.insa.ccesselin01.interfacegraphiccompo.TestFx</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>

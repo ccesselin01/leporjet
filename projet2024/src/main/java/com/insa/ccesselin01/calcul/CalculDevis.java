@@ -1,10 +1,10 @@
-package com.insa.ccesselin.calcul;
+package com.insa.ccesselin01.calcul;
 
 import java.util.Map;
 
 /**
  *
- * @author ccesselin
+ * @author ccesselin01
  */
 
 public class CalculDevis {

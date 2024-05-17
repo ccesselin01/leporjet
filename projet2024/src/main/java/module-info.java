@@ -5,6 +5,6 @@ module ProjetInfo {
     requires java.desktop;
 
     //opens com.insa.figures to javafx.graphics;
-    opens com.insa.ccesselin.interfacegraphique to javafx.graphics;
+    opens com.insa.ccesselin01.interfacegraphique to javafx.graphics;
 
 }
