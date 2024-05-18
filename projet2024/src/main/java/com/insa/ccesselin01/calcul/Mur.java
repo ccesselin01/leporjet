@@ -23,6 +23,32 @@ public class Mur
     Revetement revetement_mur;
     double hauteur ;
     private static Map<Integer, Mur> murMap = new HashMap<>() ;
+    private int nbFenetres ;
+    private int nbPortes ;
+
+    // pour prendre en compte portes et fenêtres
+    public Mur(Coin debut, Coin fin, Revetement revetement_mur, double hauteur, int nbFenetres, int nbPortes) {
+        this.debut = debut;
+        this.fin = fin;
+        this.revetement_mur = revetement_mur;
+        this.hauteur = hauteur;
+        this.nbFenetres = nbFenetres;
+        this.nbPortes = nbPortes;
+        this.idMur = next_mur++;
+        murMap.put(this.idMur, this);
+        System.out.println("Mur ajouté avec succès");
+
+    }
+
+    public int getNbFenetres() {
+        return nbFenetres;
+    }
+
+    public int getNbPortes() {
+        return nbPortes;
+    }
+    
+    
 
 
     public Mur(Coin debut, Coin fin, Revetement revetement,double hauteur ) 
@@ -34,7 +60,7 @@ public class Mur
         
         this.hauteur = hauteur;
         murMap.put(this.idMur, this);
-        System.out.println("Mur ajouté avec succes");
+        System.out.println("Mur ajouté avec succès");
         
         
     }
@@ -47,9 +73,9 @@ public class Mur
         return Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
     }
     
-    public double surface() {
+    public double surface() { // modifié
         
-        return this.longueur()*this.hauteur;
+        return this.longueur()*this.hauteur-(this.nbFenetres*1.20*1.20)-(this.nbPortes*0.90*2.10);
     }
 
     public Coin getDebut() {
@@ -80,11 +106,11 @@ public class Mur
     }
 
        
-    
-    
     public double devis_Mur (){
         double devis_mur= this.surface()*this.revetement_mur.prixunitaire;
         return devis_mur;
         
     }
+    
+   
 }

@@ -1,21 +1,3 @@
-/*
-Copyright 2000- Francois de Bertrand de Beuvron
-
-This file is part of CoursBeuvron.
-
-CoursBeuvron is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-CoursBeuvron is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with CoursBeuvron.  If not, see <http://www.gnu.org/licenses/>.
- */
 package com.insa.ccesselin01.interfacegraphique;
 
 import com.insa.ccesselin01.calcul.Coin;
@@ -69,12 +51,19 @@ public class AjoutMur extends Application  {
         
         Label lRevetement = new Label("Choisir un Revetement");
         
-       
+        // modifié :
+        
+        Label nbFenetres = new Label("Choisir le nombre de fenêtres");
+        
+        Label nbPortes = new Label("Choisir le nombre de portes");
         
         //TextField spinnerX = new TextField();
         //TextField spinnerY = new TextField();
         
-        TextField tfh = new TextField();
+        TextField tfh = new TextField(); // hauteur
+        // Modifié
+        TextField tfporte = new TextField();
+        TextField tffenetre = new TextField();
         
         ComboBox<Integer> cbDebut = new ComboBox<>();
         // Ajoute les clés de la HashMap à la liste déroulante
@@ -138,12 +127,17 @@ public class AjoutMur extends Application  {
         gridPane.add(cbFin, 1, 2);
         gridPane.add(hauteur, 0, 3);
         gridPane.add(tfh, 1, 3);
-        gridPane.add(bAnnuler, 0, 5);
-        gridPane.add(bSuivant, 2, 5);
+        gridPane.add(bAnnuler, 0, 7); // 5 modifié en 7
+        gridPane.add(bSuivant, 2, 7); // 5 modifié en 7
         gridPane.add(succes, 1, 0);
         gridPane.add(lCoutMur, 2, 3);
-        gridPane.add(lRevetement, 0, 4);
-        gridPane.add(cbRevetement, 1, 4);
+        gridPane.add(lRevetement, 0, 6);
+        gridPane.add(cbRevetement, 1, 6);
+        // Modifié
+        gridPane.add(nbFenetres, 0, 4);
+        gridPane.add(nbPortes, 0, 5);
+        gridPane.add(tfporte, 1, 5);
+        gridPane.add(tffenetre, 1, 4);
         
         // Ajustement des tailles des polices
         Font labelFont = Font.font("Arial", 14);
@@ -153,10 +147,28 @@ public class AjoutMur extends Application  {
         lCoutMur.setFont(labelFont);
         tfh.setFont(labelFont);
         hauteur.setFont(labelFont);
+        // Modifié
+        nbFenetres.setFont(labelFont);
+        nbPortes.setFont(labelFont);
+        tfporte.setFont(labelFont);
+        tffenetre.setFont(labelFont);
         
-
+        // Modifié
+       /* Button btOKfen = new Button("OK fenetre(s)/porte(s)");
+gridPane.add(btOKfen, 1, 7);
+btOKfen.setOnAction(evt -> {
+  try {
+  int porteTexte = Integer.parseInt(tfporte.getText()); // parse int sert à mettre le txt en int
+  int fenetreTexte = Integer.parseInt(tffenetre.getText());
+  //System.out.println("Porte: " + porteTexte);
+  //System.out.println("Fenêtre: " + fenetreTexte);
+  } catch (NumberFormatException e) {
+  //System.out.println("Veuillez entrer des entiers valides.");
+  }
+  });
+*/
         // Ajustement des composants avec la fenêtre
-        Scene scene = new Scene(gridPane, 700, 200);
+        Scene scene = new Scene(gridPane, 700, 290);
         
         //Ajuster les tailles des composants en fonction da la taille de la fenêtre
 
@@ -194,7 +206,41 @@ public class AjoutMur extends Application  {
         
         
         //Action lorsque le revetement est selectionné pour afficher le devis du mur
+        // Modifié
         cbRevetement.setOnAction(e -> {
+            
+            if (cbDebut.getValue() != null && cbFin != null && cbRevetement != null && tfh.getText() != null && tffenetre.getText()!=null && tfporte.getText()!=null ){
+            int selectedKey = cbDebut.getValue();
+            Coin debut = Coin.getCoin(selectedKey);
+                 
+            int selectedKey1 = cbFin.getValue();
+            Coin fin = Coin.getCoin(selectedKey1);
+            // Modifié
+            int porteTexte = Integer.parseInt(tfporte.getText()); // parse int sert à mettre le txt en int
+            int fenetreTexte = Integer.parseInt(tffenetre.getText());
+            // fin Modifié
+            Revetement revetement = cbRevetement.getValue();
+            
+            double hauteurmur = Double.parseDouble(tfh.getText());
+            
+            // double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
+            // Modifié :
+            double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2))-porteTexte*2.1*0.9-fenetreTexte*1.2*1.2;
+           
+            double cout = surface*revetement.getPrixunitaire();
+            
+            String valeurFormat = decimalFormat.format(cout);
+            System.out.println(surface+"m2 "+"cout : "+cout);
+            lCoutMur.setText(valeurFormat+" \u20AC");
+            } else {
+                lCoutMur.setText("");
+                System.out.println("entrer qqch");
+            }
+                 
+            
+        });
+        
+        /*cbRevetement.setOnAction(e -> {
             
             if (cbDebut.getValue() != null && cbFin != null && cbRevetement != null && tfh.getText() != null ){
             int selectedKey = cbDebut.getValue();
@@ -208,8 +254,10 @@ public class AjoutMur extends Application  {
             
             double hauteurmur = Double.parseDouble(tfh.getText());
             
+            // double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
+            // Modifié :
             double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
-            
+           
             double cout = surface*revetement.getPrixunitaire();
             
             String valeurFormat = decimalFormat.format(cout);
@@ -222,6 +270,7 @@ public class AjoutMur extends Application  {
                  
             
         });
+*/
         
         
         //Creation du nouveau mur avec les atribus selectionnés
@@ -238,16 +287,21 @@ public class AjoutMur extends Application  {
                  int selectedKey1 = cbFin.getValue();
                  Coin coin1 = Coin.getCoin(selectedKey1);
                  
+                 int porteTexte = Integer.parseInt(tfporte.getText()); // parse int sert à mettre le txt en int
+                 int fenetreTexte = Integer.parseInt(tffenetre.getText());
+                 
                  double hauteurmurad = Double.parseDouble(tfh.getText());
                  
                  Revetement revetement = cbRevetement.getValue();
                  
-                 Mur m = new Mur(coin,coin1,revetement,hauteurmurad);
+                 Mur m = new Mur(coin,coin1,revetement,hauteurmurad, fenetreTexte, porteTexte);
                  System.out.println("nouveau Mur "+ coin.getIdCoin() + " "+coin1.getIdCoin()+" "+revetement.getDesignation());
                  
                  cbDebut.setValue(null);
                  cbFin.setValue(null);
                  cbRevetement.setValue(null);
+                 tffenetre.setText("");
+                 tfporte.setText("");
                  tfh.setText("");
                  succes.setText("Mur "+m.getIdMur()+" ajouté !");
                  succes.setTextFill(Color.GREEN);

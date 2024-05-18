@@ -2,24 +2,8 @@ Devis de revêtements
 
 ______________________________________________________________________
 
-Revêtement : Crepi     Coût : 271,20 euros
-
-Revêtement : Carrelage     Coût : 178,90 euros
-
-Revêtement : Papier peint     Coût : 65,80 euros
-
-Revêtement : Gazon     Coût : 71,80 euros
-
-Revêtement : Peinture     Coût : 59,80 euros
-
-Revêtement : Lambris     Coût : 253,00 euros
-
-Revêtement : Marbre     Coût : 195,70 euros
-
-Revêtement : Peinture     Coût : 10,95 euros
-
-Revêtement : Plaquettes de parement     Coût : 30,40 euros
+Revêtement : Carrelage     Coût : 331,83 euros
 
 ______________________________________________________________________
 
-Coût total : 1137,55 euros
+Coût total : 331,83 euros
