@@ -1,6 +1,9 @@
 package com.insa.ccesselin01.interfacegraphique;
 
-
+/**
+ *
+ * @author jjuif01
+ */
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
@@ -12,13 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-
-
-/**
- *
- * @author jjuif01
- */
 import com.insa.ccesselin01.calcul.Revetement;
 import com.insa.ccesselin01.calcul.RevetementDatabase;
 import java.io.File;
@@ -29,9 +25,14 @@ import javafx.stage.FileChooser;
 
 
 public class Ouverture extends Application{
-    
-   
-    
+
+    public Ouverture(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    } // Modifié
+
+    public Ouverture() {
+    }
+     
     
     private Button bNouveau;
     private Button bOuvrir;
@@ -41,6 +42,7 @@ public class Ouverture extends Application{
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        
         
         
         this.primaryStage = primaryStage;
@@ -62,11 +64,8 @@ public class Ouverture extends Application{
                  catch (IOException err){
                  System.out.println(" Erreur :\n "+err);}
                  
-                
-                
              }
-            
-        });
+          });
         
         bOuvrir = new Button("Ouvrir un projet existant");
         
@@ -77,10 +76,8 @@ public class Ouverture extends Application{
                 openProjetAncien(t);
                 
              }
-            
         });
         
-
         // Création d'un conteneur HBox pour les boutons
         HBox buttonContainer = new HBox();
         buttonContainer.setSpacing(30); // Espacement entre les boutons
@@ -141,9 +138,6 @@ public class Ouverture extends Application{
             }
         }
     }
-    
-    
-
     
 }
 

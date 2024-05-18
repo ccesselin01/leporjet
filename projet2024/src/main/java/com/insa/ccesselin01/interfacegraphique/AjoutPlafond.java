@@ -37,7 +37,7 @@ public class AjoutPlafond extends Application{
     public void start(Stage primaryStage) {
 
         this.primaryStage = primaryStage;
-        primaryStage.setTitle("Ajouter un Sol");
+        primaryStage.setTitle("Ajouter un Plafond");
 
         // Création des composants
         Label m1 = new Label("Choisir le sol");
@@ -175,7 +175,7 @@ public class AjoutPlafond extends Application{
                 
                 cbRevetement.setValue(null);
 
-                succes.setText("Sol " + s.getIdSol() + " ajouté !");
+                succes.setText("Plafond " + s.getIdSol() + " ajouté !"); //chgt
                 succes.setTextFill(Color.GREEN);
 
             }
