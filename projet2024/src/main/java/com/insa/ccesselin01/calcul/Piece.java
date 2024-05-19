@@ -11,6 +11,7 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Piece {
     
     int idPiece ;
@@ -34,8 +35,7 @@ public class Piece {
         pieceMap.put(this.getIdPiece(), this);
     }
     
-    
-    
+       
     public double surface () 
     {
         return (sol.surface());
@@ -43,8 +43,6 @@ public class Piece {
 
     public static Map<Integer, Piece> getPieceMap() {
         return pieceMap;
-        
-        
     }
     
     public static Piece getPiece(int idPiece){
@@ -56,19 +54,16 @@ public class Piece {
         return nomPiece;
     }
 
-    
-    
+       
     public int getIdPiece() {
         return idPiece;
     }
     
     
-
     @Override
     public String toString() {
         return "Piece " + idPiece + " " + m1 + " "+ m2 + " "+ m3 + " "+ m4 + " " + sol + " " + plafond + ", List_revetements_surface=" + List_revetements_surface + '}';
     }
     
-    
-    
+        
 }

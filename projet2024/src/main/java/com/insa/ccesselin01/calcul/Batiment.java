@@ -12,6 +12,7 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Batiment {
    String nomProjet ;
    String idBatiment;
@@ -19,23 +20,18 @@ public class Batiment {
    ArrayList<Niveau> niveaux = new ArrayList<>();
    
    
-   
-
    public Batiment(String idBatiment,String nomProjet, int nbrNiveaux,ArrayList<Niveau> niveaux) {
         
         this.idBatiment = idBatiment;
         this.nbrNiveaux = nbrNiveaux;
         this.nomProjet= nomProjet;
-        this.niveaux = niveaux;
-        
-        
+        this.niveaux = niveaux;   
     } 
 
     public void setNiveaux(ArrayList<Niveau> niveaux) {
         this.niveaux = niveaux;
     }
-   
-    
+       
     /*
     public double devis_batiment (){
         double devis_bat = 0 ;
@@ -59,16 +55,9 @@ public class Batiment {
     }
 
 */
-    
-    
-    
-    
-    
 
     @Override
     public String toString() {
         return "Batiment{" + "idBatiment=" + idBatiment + ", nbrNiveaux=" + nbrNiveaux + ", niveaux=" + niveaux + '}';
-    }
-   
-    
+    } 
 }

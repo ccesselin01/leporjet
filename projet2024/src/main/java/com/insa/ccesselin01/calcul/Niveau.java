@@ -13,6 +13,7 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Niveau {
   int idNiveau ;
   static int next_niveau;

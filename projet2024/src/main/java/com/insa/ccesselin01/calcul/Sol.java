@@ -10,9 +10,10 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Sol {
     int idSol;
-    static int next_Sol; 
+    static int next_Sol; // par défaut next_Sol est initialisé à 0
     Mur m1,m2,m3,m4 ;
     Revetement revetement;
     private static Map<Integer, Sol> solMap = new HashMap<>() ;
@@ -75,11 +76,9 @@ public class Sol {
     }
     
     
-    
     public static Sol getSol(int idSol){
         return solMap.get(idSol);
     }
-    
     
 
     public static Map<Integer, Sol> getSolMap() {

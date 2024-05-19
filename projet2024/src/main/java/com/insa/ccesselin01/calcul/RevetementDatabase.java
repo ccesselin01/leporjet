@@ -8,6 +8,7 @@ package com.insa.ccesselin01.calcul;
  *
  * @author ccesselin01
  */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
@@ -19,15 +20,12 @@ import java.util.List;
 
 
 public class RevetementDatabase {
-    
-    
+        
     private static List<Revetement> revetements = new ArrayList<Revetement>() ;
     //private int nextId = 1; // le prochain identifiant à utiliser
     
     
     public RevetementDatabase() {
-        
-
         // Ajouter des exemples de produits à la base de données
         revetements.add(new Revetement("Revêtement de sol en bois franc", true,false,false, 7.99));
         
@@ -50,6 +48,7 @@ public class RevetementDatabase {
                 revetements.add(new Revetement(denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
                 System.out.println(" Lecture faite ");
             }
+            // ERREUR : le sol est avant le mur c pas bon??
  
         }
         catch(FileNotFoundException err){

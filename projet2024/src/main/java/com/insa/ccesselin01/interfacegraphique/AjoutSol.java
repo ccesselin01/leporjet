@@ -24,6 +24,7 @@ import javafx.stage.Stage;
  *
  * @author ccesselin01
  */
+
 public class AjoutSol extends Application {
 
     private Stage primaryStage;
@@ -48,7 +49,7 @@ public class AjoutSol extends Application {
 
         Label m4 = new Label("Choisir un Mur");
 
-        Label rev = new Label("Choisir un revetement");
+        Label rev = new Label("Choisir un revêtement");
 
         //TextField spinnerX = new TextField();
         //TextField spinnerY = new TextField();
@@ -204,10 +205,8 @@ public class AjoutSol extends Application {
             } else {
                 lCoutMur.setText("");
             }
-
         });
         
-
         bSuivant.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent t) {
@@ -239,17 +238,11 @@ public class AjoutSol extends Application {
 
                 succes.setText("Sol " + s.getIdSol() + " ajouté !");
                 succes.setTextFill(Color.GREEN);
-
             }
-
         });
 
         bAnnuler.setOnAction(event -> primaryStage.close());
-
-        
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
-
 }

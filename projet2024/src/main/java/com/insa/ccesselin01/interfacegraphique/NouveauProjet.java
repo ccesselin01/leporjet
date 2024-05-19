@@ -18,6 +18,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyCode;
 
+/**
+ *
+ * @author ccesselin01
+ */
 
 public class NouveauProjet extends Application {
     
@@ -141,9 +145,7 @@ public class NouveauProjet extends Application {
                 openRenseignementDevis();
 
                 // Fermez la fenêtre si nécessaire
-                
-                
-             }
+            }
             
         });
       /*  
@@ -178,8 +180,5 @@ public class NouveauProjet extends Application {
         
     }
 }
-/**
- *
- * @author ccesselin01
- */
+
 

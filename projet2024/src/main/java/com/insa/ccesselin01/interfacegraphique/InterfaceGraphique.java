@@ -4,6 +4,7 @@ package com.insa.ccesselin01.interfacegraphique;
  *
  * @author ccesselin01 
  */
+
 import com.insa.ccesselin01.calcul.Appartement;
 import com.insa.ccesselin01.calcul.Batiment;
 import com.insa.ccesselin01.calcul.CalculDevis;
@@ -41,10 +42,8 @@ public class InterfaceGraphique extends Application {
     
     Canvas canvas = new Canvas(400, 400);
     
-
     GraphicsContext gc = canvas.getGraphicsContext2D();
-    
-   
+      
 
     @Override
     public void start(Stage primaryStage) {
@@ -73,7 +72,6 @@ public class InterfaceGraphique extends Application {
         Button sauvegarderButton = new Button("Sauvegarder le projet");
         
         precedentButton.setOnAction(event -> {
-            
             RenseignementDevis niv = new RenseignementDevis(); 
             niv.start(primaryStage);
             
@@ -102,8 +100,7 @@ public class InterfaceGraphique extends Application {
         buttonsBox.setPadding(new Insets(10));
         buttonsBox.setAlignment(Pos.BOTTOM_RIGHT);
         
-        
-        
+                
         // Ajout des composants à la fenêtre principale
         splitPane.getItems().addAll(leftPane, rightPane);
         VBox mainBox = new VBox(splitPane, buttonsBox);
@@ -329,9 +326,6 @@ public class InterfaceGraphique extends Application {
                 //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
         
-        
-             
-            
         });
 
         GridPane gridPane = new GridPane();
@@ -411,8 +405,7 @@ public class InterfaceGraphique extends Application {
             
             Mur value = entry.getValue();
             gc.strokeLine(value.getDebut().getX()*40, value.getDebut().getY()*40, value.getFin().getX()*40,value.getFin().getY()*40);
-            
-            
+          
         }
     }
     
@@ -428,8 +421,6 @@ public class InterfaceGraphique extends Application {
         pieceAajouterComboBox.getItems().addAll(Piece.getPieceMap().keySet());
         appartementNumComboBox.getItems().addAll(Appartement.getAppartementMap().keySet());
         System.out.println("combo updated");
-        
-        
+      
     }
-
 }

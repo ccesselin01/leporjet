@@ -4,7 +4,6 @@
  */
 package com.insa.ccesselin01.calcul;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +12,7 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Appartement {
 
     int idAppart;
@@ -57,11 +57,6 @@ public class Appartement {
         }
         return surface;
     }
-
-    
-    
-    
-    
     
     public double devis_appart (){
         double devis_appart = 0;
@@ -69,12 +64,9 @@ public class Appartement {
             //devis_appart = devis_appart + pieces[i].devis_piece();
         }
         return devis_appart;
-        
     }
 
     public static Map<Integer, Appartement> getAppartementMap() {
         return appartementMap;
     }
-    
-
 }

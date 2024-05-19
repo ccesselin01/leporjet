@@ -37,7 +37,6 @@ public class Mur
         this.idMur = next_mur++;
         murMap.put(this.idMur, this);
         System.out.println("Mur ajouté avec succès");
-
     }
 
     public int getNbFenetres() {
@@ -48,9 +47,6 @@ public class Mur
         return nbPortes;
     }
     
-    
-
-
     public Mur(Coin debut, Coin fin, Revetement revetement,double hauteur ) 
     {
         this.debut = debut;
@@ -104,7 +100,6 @@ public class Mur
     public String toString() {
         return "Mur " + idMur + " " +  debut + " " + fin + " " + revetement_mur.getId() + " " + hauteur ;
     }
-
        
     public double devis_Mur (){
         double devis_mur= this.surface()*this.revetement_mur.prixunitaire;
@@ -112,5 +107,4 @@ public class Mur
         
     }
     
-   
 }

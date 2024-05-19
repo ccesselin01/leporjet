@@ -35,8 +35,6 @@ public class CalculDevis {
         
         System.out.println("Sol fait !");
         
-        
-        
         for (Map.Entry<Integer, Plafond> entry : Plafond.getplafondMap().entrySet()) {
             Integer key = entry.getKey();
             Plafond value = entry.getValue();
@@ -50,6 +48,5 @@ public class CalculDevis {
     public Devis getDevis() {
         return devis;
     }
-    
     
 }

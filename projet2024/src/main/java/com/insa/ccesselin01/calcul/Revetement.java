@@ -12,8 +12,8 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Revetement {
-    
     
     int idRevetement ;
     static int next_revetement;
@@ -110,9 +110,6 @@ public class Revetement {
     }
 
     
-    
-    
-    
     public static void loadRevetement() throws IOException {
     
         RevetementDatabase.loadFromFile("revetements.txt");
@@ -122,7 +119,6 @@ public class Revetement {
     public String toString() {
         return "Revetement{" + "idRevetement=" + idRevetement + ", designation=" + designation + ", prixunitaire=" + prixunitaire + ", poursol=" + poursol + ", pourmur=" + pourmur + ", pourplafond=" + pourplafond + '}';
     }
-    
     
 }
 

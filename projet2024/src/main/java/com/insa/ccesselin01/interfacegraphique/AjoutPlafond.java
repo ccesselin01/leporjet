@@ -24,6 +24,7 @@ import javafx.stage.Stage;
  *
  * @author ccesselin01
  */
+
 public class AjoutPlafond extends Application{
     
     private Stage primaryStage;
@@ -42,7 +43,7 @@ public class AjoutPlafond extends Application{
         // Création des composants
         Label m1 = new Label("Choisir le sol");
 
-        Label rev = new Label("Choisir un revetement");
+        Label rev = new Label("Choisir un revêtement");
 
         //TextField spinnerX = new TextField();
         //TextField spinnerY = new TextField();
@@ -167,12 +168,11 @@ public class AjoutPlafond extends Application{
                 Sol s = Sol.getSol(selectedKey);
 
                 Revetement revetement = cbRevetement.getValue();
-
+                // get les id des murs du sol sélectionné correspondant à ceux du plafond
                 Plafond p = new Plafond(s.getM1(), s.getM2(), s.getM3(), s.getM4(), revetement);
-                System.out.println("nouveau Sol " + " " + revetement.getDesignation());
+                System.out.println("nouveau Plafond " + " " + revetement.getDesignation());
 
                 cbM1.setValue(null);
-                
                 cbRevetement.setValue(null);
 
                 succes.setText("Plafond " + s.getIdSol() + " ajouté !"); //chgt

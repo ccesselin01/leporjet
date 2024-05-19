@@ -11,6 +11,7 @@ import java.util.Map;
  *
  * @author ccesselin01
  */
+
 public class Plafond {
     
     Mur m1,m2 ;
@@ -56,7 +57,6 @@ public class Plafond {
         
     }
     
-
     public Revetement getRevetement() {
         return revetement;
     }
@@ -65,7 +65,5 @@ public class Plafond {
     public String toString() {
         return "Plafond " + idplafond + " " + m1 + " " + m2 + " " + revetement.getId() ;
     }
-   
-    
    
 }

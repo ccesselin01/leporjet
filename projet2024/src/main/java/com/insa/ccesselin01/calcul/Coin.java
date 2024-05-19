@@ -33,7 +33,6 @@ public class Coin
     {
         this.x = 0 ; this.y = 0 ; idCoin = 0 ;
     }
-
     
     
     public double getX() {
