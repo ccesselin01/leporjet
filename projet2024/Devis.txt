@@ -2,8 +2,12 @@ Devis de revêtements
 
 ______________________________________________________________________
 
-Revêtement : Carrelage     Coût : 331,83 euros
+Revêtement : Carrelage     Coût : 298,50 euros
+
+Revêtement : Peinture     Coût : 77,30 euros
+
+Revêtement : Peinture     Coût : 87,60 euros
 
 ______________________________________________________________________
 
-Coût total : 331,83 euros
+Coût total : 463,40 euros

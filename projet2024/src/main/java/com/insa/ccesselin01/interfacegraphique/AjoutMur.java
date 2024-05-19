@@ -16,6 +16,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -39,17 +40,17 @@ public class AjoutMur extends Application  {
     public void start(Stage primaryStage) {
         
         this.primaryStage = primaryStage;
-        primaryStage.setTitle("Ajouter un coin par coodonnées");
+        primaryStage.setTitle("Ajouter un mur");
 
         // Création des composants
         
         Label Debut = new Label("Choisir un coin Début");
 
-        Label Fin = new Label("Choisir un coin de Fin");
+        Label Fin = new Label("Choisir un coin Fin");
         
         Label hauteur = new Label("Hauteur ");
         
-        Label lRevetement = new Label("Choisir un Revetement");
+        Label lRevetement = new Label("Choisir un Revêtement");
         
         // modifié :
         
@@ -65,6 +66,20 @@ public class AjoutMur extends Application  {
         TextField tfporte = new TextField();
         TextField tffenetre = new TextField();
         
+        tfh.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                // Code pour passer au champ suivant
+                tffenetre.requestFocus();
+            }
+        });
+        tffenetre.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                // Code pour passer au champ suivant
+                tfporte.requestFocus();
+            }
+        });
+        
+        
         ComboBox<Integer> cbDebut = new ComboBox<>();
         // Ajoute les clés de la HashMap à la liste déroulante
         cbDebut.getItems().addAll(Coin.getCoinMap().keySet());
@@ -77,12 +92,17 @@ public class AjoutMur extends Application  {
         
         ComboBox<Revetement> cbRevetement = new ComboBox<>();
         
+        tfporte.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                // Code pour passer au champ suivant
+                cbRevetement.requestFocus();
+            }
+        });
         //Commande pour debugage
         //System.out.println("Ajout combo");
         //System.out.println(Revetement.getRevPourMurMap().values());
         
         cbRevetement.getItems().addAll(Revetement.getRevPourMurMap().values());
-        
         // Ajoute les objets Revêtement à la liste déroulante
         
 
@@ -100,17 +120,12 @@ public class AjoutMur extends Application  {
             }
         });
 
-        
-        
         //boutton suivant
         Button bSuivant = new Button("Suivant");
         
         //boutton annuler
-        
         Button bAnnuler = new Button("Fermer");
         
-        
-
         // Création de la grille pour organiser les composants
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(20));
@@ -153,20 +168,7 @@ public class AjoutMur extends Application  {
         tfporte.setFont(labelFont);
         tffenetre.setFont(labelFont);
         
-        // Modifié
-       /* Button btOKfen = new Button("OK fenetre(s)/porte(s)");
-gridPane.add(btOKfen, 1, 7);
-btOKfen.setOnAction(evt -> {
-  try {
-  int porteTexte = Integer.parseInt(tfporte.getText()); // parse int sert à mettre le txt en int
-  int fenetreTexte = Integer.parseInt(tffenetre.getText());
-  //System.out.println("Porte: " + porteTexte);
-  //System.out.println("Fenêtre: " + fenetreTexte);
-  } catch (NumberFormatException e) {
-  //System.out.println("Veuillez entrer des entiers valides.");
-  }
-  });
-*/
+        
         // Ajustement des composants avec la fenêtre
         Scene scene = new Scene(gridPane, 700, 290);
         
@@ -185,7 +187,6 @@ btOKfen.setOnAction(evt -> {
         
         bAnnuler.prefHeightProperty().bind(scene.heightProperty().multiply(0.05));
         bSuivant.prefHeightProperty().bind(scene.heightProperty().multiply(0.05));
-        
         
         
         lCoutMur.prefWidthProperty().bind(scene.widthProperty().multiply(0.25));
@@ -236,45 +237,9 @@ btOKfen.setOnAction(evt -> {
                 lCoutMur.setText("");
                 System.out.println("entrer qqch");
             }
-                 
-            
         });
-        
-        /*cbRevetement.setOnAction(e -> {
-            
-            if (cbDebut.getValue() != null && cbFin != null && cbRevetement != null && tfh.getText() != null ){
-            int selectedKey = cbDebut.getValue();
-            Coin debut = Coin.getCoin(selectedKey);
-                 
-            int selectedKey1 = cbFin.getValue();
-            Coin fin = Coin.getCoin(selectedKey1);
-            
-            
-            Revetement revetement = cbRevetement.getValue();
-            
-            double hauteurmur = Double.parseDouble(tfh.getText());
-            
-            // double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
-            // Modifié :
-            double surface = hauteurmur * Math.sqrt(Math.pow((debut.getX()-fin.getX()),2)+Math.pow(debut.getY()-fin.getY(), 2));
-           
-            double cout = surface*revetement.getPrixunitaire();
-            
-            String valeurFormat = decimalFormat.format(cout);
-            System.out.println(surface+"m2 "+"cout : "+cout);
-            lCoutMur.setText(valeurFormat+" \u20AC");
-            } else {
-                lCoutMur.setText("");
-                System.out.println("entrer qqch");
-            }
-                 
-            
-        });
-*/
-        
         
         //Creation du nouveau mur avec les atribus selectionnés
-        
         bSuivant.setOnAction(new EventHandler<ActionEvent>() {
              @Override
              public void handle(ActionEvent t) {
@@ -283,13 +248,11 @@ btOKfen.setOnAction(evt -> {
                  
                  int selectedKey = cbDebut.getValue();
                  Coin coin = Coin.getCoin(selectedKey);
-                 
                  int selectedKey1 = cbFin.getValue();
                  Coin coin1 = Coin.getCoin(selectedKey1);
                  
                  int porteTexte = Integer.parseInt(tfporte.getText()); // parse int sert à mettre le txt en int
                  int fenetreTexte = Integer.parseInt(tffenetre.getText());
-                 
                  double hauteurmurad = Double.parseDouble(tfh.getText());
                  
                  Revetement revetement = cbRevetement.getValue();
@@ -305,18 +268,12 @@ btOKfen.setOnAction(evt -> {
                  tfh.setText("");
                  succes.setText("Mur "+m.getIdMur()+" ajouté !");
                  succes.setTextFill(Color.GREEN);
-                 
-                 
-                 
-                 
+               
              }
-            
         });
         
         //fermer la fenêtre lorsque l'on clique sur annuler
-        
         bAnnuler.setOnAction(event -> primaryStage.close());
-        
         
         primaryStage.setScene(scene);
         primaryStage.show();

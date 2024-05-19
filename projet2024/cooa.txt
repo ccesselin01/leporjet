@@ -1,0 +1,17 @@
+Sauvegarde du Projet
+
+Coin Coin 0 0.0 0.0
+Coin Coin 1 1.0 0.0
+Coin Coin 2 2.0 0.0
+Coin Coin 3 2.0 1.0
+Coin Coin 4 1.0 1.0
+Coin Coin 5 0.0 1.0
+Mur 0 Coin 0 0.0 0.0 Coin 1 1.0 0.0 0 2.0
+Mur 1 Coin 1 1.0 0.0 Coin 2 2.0 0.0 0 2.0
+Mur 2 Coin 2 2.0 0.0 Coin 3 2.0 1.0 0 2.0
+Mur 3 Coin 3 2.0 1.0 Coin 4 1.0 1.0 0 2.0
+Mur 4 Coin 4 1.0 1.0 Coin 1 1.0 0.0 1 2.0
+Plafond 0 Mur 3 Coin 3 2.0 1.0 Coin 4 1.0 1.0 0 2.0 Mur 4 Coin 4 1.0 1.0 Coin 1 1.0 0.0 1 2.0 7
+Sol 0 Mur 1 Coin 1 1.0 0.0 Coin 2 2.0 0.0 0 2.0 Mur 2 Coin 2 2.0 0.0 Coin 3 2.0 1.0 0 2.0 1
+Piece 0 Mur 1 Coin 1 1.0 0.0 Coin 2 2.0 0.0 0 2.0 Mur 2 Coin 2 2.0 0.0 Coin 3 2.0 1.0 0 2.0 Mur 3 Coin 3 2.0 1.0 Coin 4 1.0 1.0 0 2.0 Mur 4 Coin 4 1.0 1.0 Coin 1 1.0 0.0 1 2.0 Sol 0 Mur 1 Coin 1 1.0 0.0 Coin 2 2.0 0.0 0 2.0 Mur 2 Coin 2 2.0 0.0 Coin 3 2.0 1.0 0 2.0 1 Plafond 0 Mur 3 Coin 3 2.0 1.0 Coin 4 1.0 1.0 0 2.0 Mur 4 Coin 4 1.0 1.0 Coin 1 1.0 0.0 1 2.0 7, List_revetements_surface=null}
+com.insa.ccesselin01.calcul.Appartement@4f512f2c
