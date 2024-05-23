@@ -1,0 +1,5 @@
+Sauvegarde du Projet
+
+ Coin ; 0 ; 0.0 ; 0.0 ;
+ Coin ; 1 ; 1.0 ; 0.0 ;
+Mur ; 0 ; Coin ; 0 ; 0.0 ; 0.0 ; ; Coin ; 1 ; 1.0 ; 0.0 ; ; 0 ; 1 ; 0 ; 2.0

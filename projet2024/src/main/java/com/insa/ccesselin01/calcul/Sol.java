@@ -88,7 +88,7 @@ public class Sol {
     
     @Override
     public String toString() {
-        return "Sol " + idSol + " " + m1 + " " + m2 + " " + revetement.getId() ;
+        return "Sol ; " + idSol + " ; " + m1.getIdMur() + " ; " + m2.getIdMur() + " ; " + m3.getIdMur()+ " ; " + m4.getIdMur()+ " ; " + revetement.getId() ;
     }
     
 }

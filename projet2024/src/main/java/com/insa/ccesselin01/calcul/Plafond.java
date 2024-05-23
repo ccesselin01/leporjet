@@ -63,7 +63,7 @@ public class Plafond {
 
     @Override
     public String toString() {
-        return "Plafond " + idplafond + " " + m1 + " " + m2 + " " + revetement.getId() ;
+        return "Plafond ; " + idplafond + " ; " + m1 + " " + m2 + " " + revetement.getId() ;
     }
    
 }

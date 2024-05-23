@@ -98,7 +98,7 @@ public class Mur
 
     @Override
     public String toString() {
-        return "Mur " + idMur + " " +  debut + " " + fin + " " + revetement_mur.getId() + " " + hauteur ;
+        return "Mur ; " + idMur + " ; " +  debut.getIdCoin() + " ; " + fin.getIdCoin() + " ; " + nbPortes + " ; " + nbFenetres + " ; " + revetement_mur.getId() + " ; " + hauteur ;
     }
        
     public double devis_Mur (){

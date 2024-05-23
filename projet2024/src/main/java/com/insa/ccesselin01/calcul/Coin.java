@@ -57,7 +57,7 @@ public class Coin
     
     @Override
     public String toString() {
-        return "Coin "+ idCoin + " " + x + " " + y ;
+        return "Coin ; "+ idCoin + " ; " + x + " ; " + y; // modif
     }
 
 }
