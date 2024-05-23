@@ -24,31 +24,24 @@ import javafx.scene.control.Alert;
 import javafx.stage.FileChooser;
 
 
-public class Ouverture extends Application{
+public class Ouverture {
+   
+    private Stage secondStage;
 
-    public Ouverture(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-    } // Modifié
-
-    public Ouverture() {
+    public Ouverture(Stage secondStage) {
+        this.secondStage = secondStage;
     }
-     
-    
-    private Button bNouveau;
-    private Button bOuvrir;
-    
-    public Scene scene;
-    private Stage primaryStage;
 
-    @Override
-    public void start(Stage primaryStage) throws IOException {
+    
+    
+    public void debut(Stage secondStage)  {
         
         
+      
+       secondStage.setTitle("Sélection des options");
+       Sceneoutil.setAppIcon(secondStage);
         
-        this.primaryStage = primaryStage;
-        primaryStage.setTitle("Sélection des options");
-        
-        bNouveau = new Button("Créer un Nouveau projet");
+        Button bNouveau = new Button("Créer un Nouveau projet");
         
         bNouveau.setOnAction(new EventHandler<ActionEvent>()  {
              @Override
@@ -64,10 +57,13 @@ public class Ouverture extends Application{
                  catch (IOException err){
                  System.out.println(" Erreur :\n "+err);}
                  
+                
+                
              }
-          });
+            
+        });
         
-        bOuvrir = new Button("Ouvrir un projet existant");
+        Button bOuvrir = new Button("Ouvrir un projet existant");
         
         bOuvrir.setOnAction(new EventHandler<ActionEvent>() {
              @Override
@@ -76,13 +72,15 @@ public class Ouverture extends Application{
                 openProjetAncien(t);
                 
              }
+            
         });
         
+
         // Création d'un conteneur HBox pour les boutons
         HBox buttonContainer = new HBox();
         buttonContainer.setSpacing(30); // Espacement entre les boutons
         buttonContainer.setAlignment(Pos.CENTER); // Centrage horizontal des boutons
-        buttonContainer.getChildren().addAll(bNouveau, bOuvrir); // enlever le bOuvrir pour enlever le bouton
+        buttonContainer.getChildren().addAll(bNouveau, bOuvrir);
 
         // Création du conteneur principal VBox
         VBox root = new VBox();
@@ -90,14 +88,14 @@ public class Ouverture extends Application{
         root.setPadding(new Insets(100)); // Marge intérieure de la fenêtre
         root.setAlignment(Pos.CENTER); // Centrage vertical des boutons
         root.getChildren().add(buttonContainer);
-        scene = new Scene(root, 900, 600);
+        Scene scene = new Scene(root, 900, 600);
         // Lier la largeur des boutons à la largeur de la fenêtre
         bNouveau.prefWidthProperty().bind(scene.widthProperty().divide(2));
-        bOuvrir.prefWidthProperty().bind(scene.widthProperty().divide(2));//texte dans le bouton
+        bOuvrir.prefWidthProperty().bind(scene.widthProperty().divide(2));
 
         // Lier la hauteur des boutons à la hauteur de la fenêtre
         bNouveau.prefHeightProperty().bind(scene.heightProperty().divide(6));
-        bOuvrir.prefHeightProperty().bind(scene.heightProperty().divide(6)); // hauteur du bouton
+        bOuvrir.prefHeightProperty().bind(scene.heightProperty().divide(6));
 
         // Configuration de la scène et affichage de la fenêtre
         
@@ -107,21 +105,25 @@ public class Ouverture extends Application{
 
         // Création de la scène
         
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        secondStage.setScene(scene);
+        showStage();
         
+    }
+    
+     public void showStage() {
+        secondStage.show();
     }
     
     private void openNouveauProjet() throws IOException {
         NouveauProjet newproj = new NouveauProjet();
-        newproj.start(primaryStage);
+        newproj.start(secondStage);
         Revetement.loadRevetement();
         
     }
 
     public void openProjetAncien(ActionEvent t) {
         FileChooser chooser = new FileChooser();
-        File f = chooser.showOpenDialog(this.primaryStage);
+        File f = chooser.showOpenDialog(this.secondStage);
         if (f != null) {
             try {
                 
@@ -139,5 +141,6 @@ public class Ouverture extends Application{
         }
     }
     
+    
+    
 }
-

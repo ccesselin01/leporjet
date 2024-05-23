@@ -42,14 +42,18 @@ public class NouveauProjet extends Application {
         // Création des composants
         Label nameLabel = new Label("ID du bâtiment:");
         TextField nameField = new TextField();
+        nameField.setMaxWidth(450);
 
         Label projectLabel = new Label("Nom du projet:");
         TextField projectField = new TextField();
+        projectField.setMaxWidth(450);
 
         Label levelLabel = new Label("Nombre de niveaux:");
         Spinner<Integer> levelSpinner = new Spinner<>(1, 100, 1);
+        levelSpinner.setMaxWidth(450);
 
-        Button confirmButton = new Button("Confirmer");
+         Button confirmButton = new Button("Confirmer");
+         confirmButton.setMaxWidth(70);
 
         // Création de la grille pour organiser les composants
         GridPane gridPane = new GridPane();
@@ -145,7 +149,9 @@ public class NouveauProjet extends Application {
                 openRenseignementDevis();
 
                 // Fermez la fenêtre si nécessaire
-            }
+                
+                
+             }
             
         });
       /*  
@@ -180,5 +186,3 @@ public class NouveauProjet extends Application {
         
     }
 }
-
-
