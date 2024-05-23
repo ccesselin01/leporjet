@@ -1,0 +1,14 @@
+/* styles.css */
+
+.welcome-label {
+    -fx-font-family: Arial;
+    -fx-font-size: 20px;
+}
+
+.start-button {
+    -fx-font-size: 20px;
+}
+
+.welcome-layout {
+    -fx-alignment: center; 
+}
