@@ -13,15 +13,15 @@ import java.util.Map;
  */
 
 public class Plafond {
-    
-    Mur m1,m2 ;
+    Sol s;
+   // Mur m1,m2 ;
     int idplafond;
     static int next_plafond;
     Revetement revetement;
     private static Map<Integer, Plafond> plafondMap = new HashMap<>() ;
     
     
-    public Plafond(Mur m1, Mur m2,Mur m3, Mur m4, Revetement revetement)
+    /*public Plafond(Mur m1, Mur m2,Mur m3, Mur m4, Revetement revetement)
     {
       this.idplafond = next_plafond++ ;
       this.m1 = m1 ;
@@ -30,12 +30,23 @@ public class Plafond {
       this.m2 = m4 ;
       this.revetement = revetement;
       plafondMap.put(this.idplafond, this);
+    }*/
+
+    public Plafond(Sol s, Revetement revetement) { // nouveau constructeur
+        this.idplafond= next_plafond++;
+        this.s = s;
+        this.revetement = revetement;
+        plafondMap.put(this.idplafond, this);
     }
     
-    public double surface() 
+    /*public double surface() 
     {
        return m1.longueur()*m2.longueur() ;
-    }  
+    }*/
+    public double surface(){ // modif
+        return s.surface();
+       
+    }
     
    public double devis_plafond (){
         double devis_plafond= this.surface()*this.revetement.prixunitaire;
@@ -61,9 +72,18 @@ public class Plafond {
         return revetement;
     }
 
-    @Override
+    public Sol getS() {
+        return s;
+    }
+    
+    
+
+    /*@Override
     public String toString() {
         return "Plafond ; " + idplafond + " ; " + m1 + " " + m2 + " " + revetement.getId() ;
+    }*/
+   @Override
+    public String toString() {
+        return "Plafond ; " + idplafond + " ; " + s.getIdSol() + " ; " + revetement.getId() ;
     }
-   
 }

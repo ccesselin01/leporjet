@@ -60,10 +60,13 @@ public class Piece {
     }
     
     
-    @Override
+    /*@Override
     public String toString() {
         return "Piece " + idPiece + " " + m1 + " "+ m2 + " "+ m3 + " "+ m4 + " " + sol + " " + plafond + ", List_revetements_surface=" + List_revetements_surface + '}';
+    }*/
+    @Override
+    public String toString() {
+        return "Piece ; " + idPiece + " ; " + sol.getIdSol() + " ; "+ plafond.getIdplafond();
     }
-    
-        
+     
 }

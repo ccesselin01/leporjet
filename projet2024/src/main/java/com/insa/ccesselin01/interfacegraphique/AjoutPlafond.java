@@ -42,7 +42,6 @@ public class AjoutPlafond extends Application{
 
         // Création des composants
         Label m1 = new Label("Choisir le sol");
-
         Label rev = new Label("Choisir un revêtement");
 
         //TextField spinnerX = new TextField();
@@ -157,7 +156,7 @@ public class AjoutPlafond extends Application{
         });
         
         
-        //créer le plafond avec les atribus selectionnés
+        //créer le plafond avec les attributs selectionnés
         bSuivant.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent t) {
@@ -169,7 +168,9 @@ public class AjoutPlafond extends Application{
 
                 Revetement revetement = cbRevetement.getValue();
                 // get les id des murs du sol sélectionné correspondant à ceux du plafond
-                Plafond p = new Plafond(s.getM1(), s.getM2(), s.getM3(), s.getM4(), revetement);
+                
+                //Plafond p = new Plafond(s.getM1(), s.getM2(), s.getM3(), s.getM4(), revetement);
+                Plafond p = new Plafond(s, revetement);
                 System.out.println("nouveau Plafond " + " " + revetement.getDesignation());
 
                 cbM1.setValue(null);

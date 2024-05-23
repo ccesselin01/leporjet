@@ -25,11 +25,11 @@ public class RevetementDatabase {
     //private int nextId = 1; // le prochain identifiant à utiliser
     
     
-    public RevetementDatabase() {
+    /*public RevetementDatabase() {
         // Ajouter des exemples de produits à la base de données
         revetements.add(new Revetement("Revêtement de sol en bois franc", true,false,false, 7.99));
         
-    }
+    }*/ //à enlever?
     public static void loadFromFile (String filename) throws IOException {
         
         
@@ -45,7 +45,8 @@ public class RevetementDatabase {
                 boolean pourSol = fields[3].equals("1");
                 boolean pourPlafond = fields[4].equals("1");
                 double prixUnitaire = Double.parseDouble(fields[5]);
-                revetements.add(new Revetement(denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
+                //revetements.add(new Revetement(denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
+                revetements.add(new Revetement(id,denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
                 System.out.println(" Lecture faite ");
             }
             // ERREUR : le sol est avant le mur c pas bon??

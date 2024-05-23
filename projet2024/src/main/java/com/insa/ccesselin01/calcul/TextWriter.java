@@ -70,18 +70,18 @@ public class TextWriter {
                 printWriter.print(mursauvegarde.toString());
                 printWriter.println();
             }
-            for (Map.Entry<Integer, Plafond> entry : Plafond.getplafondMap().entrySet()) {
-                Integer idPlafond = entry.getKey();
-                Plafond plafondsauvegarde = entry.getValue();
-
-                printWriter.print(plafondsauvegarde.toString());
-                printWriter.println();
-            }
             for (Map.Entry<Integer, Sol> entry : Sol.getSolMap().entrySet()) {
                 Integer idSol = entry.getKey();
                 Sol solsauvegarde = entry.getValue();
 
                 printWriter.print(solsauvegarde.toString());
+                printWriter.println();
+            }
+            for (Map.Entry<Integer, Plafond> entry : Plafond.getplafondMap().entrySet()) {
+                Integer idPlafond = entry.getKey();
+                Plafond plafondsauvegarde = entry.getValue();
+
+                printWriter.print(plafondsauvegarde.toString());
                 printWriter.println();
             }
             for (Map.Entry<Integer, Piece> entry : Piece.getPieceMap().entrySet()) {

@@ -30,8 +30,9 @@ public class Revetement {
     public Revetement() {
     }
     
-    public Revetement(String designation, boolean poursol, boolean pourmur, boolean pourplafond, double prixunitaire) {
-        this.idRevetement = next_revetement++;
+    public Revetement(int idRevetement, String designation, boolean poursol, boolean pourmur, boolean pourplafond, double prixunitaire) {
+        //this.idRevetement = next_revetement++;//non
+        this.idRevetement = idRevetement;
         this.designation = designation;
         this.prixunitaire = prixunitaire;
         this.poursol = poursol;

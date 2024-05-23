@@ -1,0 +1,15 @@
+Sauvegarde du Projet
+
+ Coin ; 0 ; 0.0 ; 0.0
+ Coin ; 1 ; 0.0 ; 1.0
+ Coin ; 2 ; 1.0 ; 1.0
+ Coin ; 3 ; 1.0 ; 0.0
+Mur ; 0 ; 0 ; 1 ; 0 ; 1 ; 102 ; 2.0
+Mur ; 1 ; 0 ; 3 ; 0 ; 0 ; 8 ; 2.0
+Mur ; 2 ; 1 ; 2 ; 0 ; 0 ; 102 ; 2.0
+Mur ; 3 ; 2 ; 3 ; 0 ; 0 ; 8 ; 2.0
+Sol ; 0 ; 0 ; 1 ; 2 ; 3 ; 114
+Plafond ; 0 ; 0 ; 8
+Piece ; 0 ; 0 ; 0
+com.insa.ccesselin01.calcul.Niveau@511ad5cb
+com.insa.ccesselin01.calcul.Appartement@3cbf0664

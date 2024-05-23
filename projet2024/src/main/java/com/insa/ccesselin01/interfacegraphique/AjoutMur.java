@@ -45,17 +45,13 @@ public class AjoutMur extends Application  {
         // Création des composants
         
         Label Debut = new Label("Choisir un coin Début");
-
         Label Fin = new Label("Choisir un coin Fin");
-        
         Label hauteur = new Label("Hauteur ");
-        
         Label lRevetement = new Label("Choisir un Revêtement");
         
         // modifié :
         
         Label nbFenetres = new Label("Choisir le nombre de fenêtres");
-        
         Label nbPortes = new Label("Choisir le nombre de portes");
         
         //TextField spinnerX = new TextField();
