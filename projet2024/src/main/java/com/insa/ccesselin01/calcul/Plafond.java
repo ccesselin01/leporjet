@@ -38,6 +38,12 @@ public class Plafond {
         this.revetement = revetement;
         plafondMap.put(this.idplafond, this);
     }
+
+    public Plafond(int idplafond, Sol s, Revetement revetement) {
+        this.s = s;
+        this.idplafond = idplafond;
+        this.revetement = revetement;
+    }
     
     /*public double surface() 
     {

@@ -27,7 +27,7 @@ public class AncienProjet extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Overture d'un Projet");
+        primaryStage.setTitle("Ouverture d'un Projet");
 
         /*
         // Création des composants

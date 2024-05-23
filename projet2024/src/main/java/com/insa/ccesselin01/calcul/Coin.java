@@ -28,6 +28,12 @@ public class Coin
         coinMap.put(this.getIdCoin(), this);
         
     }
+
+    public Coin(int idCoin, double x, double y) { // pour le textreader
+        this.idCoin = idCoin;
+        this.x = x;
+        this.y = y;
+    }
     
     public Coin ()
     {

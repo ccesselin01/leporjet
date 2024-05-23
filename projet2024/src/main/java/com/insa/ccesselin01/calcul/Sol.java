@@ -29,6 +29,16 @@ public class Sol {
         this.revetement = revetement;
         solMap.put(this.getIdSol(), this);
     }
+
+    public Sol(int idSol, Mur m1, Mur m2, Mur m3, Mur m4, Revetement revetement) {//pour textreader
+        this.idSol = idSol;
+        this.m1 = m1;
+        this.m2 = m2;
+        this.m3 = m3;
+        this.m4 = m4;
+        this.revetement = revetement;
+        solMap.put(this.getIdSol(), this);
+    }
     
     
     public double surface()

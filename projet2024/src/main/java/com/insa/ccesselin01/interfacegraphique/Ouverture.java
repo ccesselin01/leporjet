@@ -32,12 +32,8 @@ public class Ouverture {
         this.secondStage = secondStage;
     }
 
-    
-    
     public void debut(Stage secondStage)  {
         
-        
-      
        secondStage.setTitle("Sélection des options");
        Sceneoutil.setAppIcon(secondStage);
         
@@ -126,8 +122,6 @@ public class Ouverture {
         File f = chooser.showOpenDialog(this.secondStage);
         if (f != null) {
             try {
-                
-                
             } catch (Exception ex) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Erreur");
@@ -140,7 +134,4 @@ public class Ouverture {
             }
         }
     }
-    
-    
-    
 }

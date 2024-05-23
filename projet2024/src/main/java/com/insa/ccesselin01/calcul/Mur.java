@@ -53,13 +53,24 @@ public class Mur
         this.fin = fin;
         this.idMur = next_mur++;
         this.revetement_mur = revetement;
-        
         this.hauteur = hauteur;
         murMap.put(this.idMur, this);
         System.out.println("Mur ajouté avec succès");
         
         
     }
+
+    public Mur(int idMur, Coin debut, Coin fin, int nbPortes, int nbFenetres, Revetement revetement_mur, double hauteur) {
+        this.debut = debut;
+        this.fin = fin;
+        this.idMur = idMur;
+        this.revetement_mur = revetement_mur;
+        this.hauteur = hauteur;
+        this.nbFenetres = nbFenetres;
+        this.nbPortes = nbPortes;
+        murMap.put(this.idMur, this);
+    }
+    
     
     public static Mur getMur(int idMur) {
         return murMap.get(idMur) ;
