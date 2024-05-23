@@ -1,0 +1,19 @@
+Sauvegarde du Projet
+
+Coin Coin 0 0.0 0.0
+Coin Coin 1 0.0 1.0
+Coin Coin 2 0.0 2.0
+Coin Coin 3 1.0 2.0
+Coin Coin 4 1.0 1.0
+Coin Coin 5 1.0 0.0
+Mur 0 Coin 0 0.0 0.0 Coin 1 0.0 1.0 0 2.0
+Mur 1 Coin 1 0.0 1.0 Coin 2 0.0 2.0 1 2.0
+Mur 2 Coin 2 0.0 2.0 Coin 3 1.0 2.0 0 2.0
+Mur 3 Coin 3 1.0 2.0 Coin 4 1.0 1.0 4 2.0
+Mur 4 Coin 4 1.0 1.0 Coin 1 0.0 1.0 0 2.0
+Mur 5 Coin 4 1.0 1.0 Coin 5 1.0 0.0 1 2.0
+Mur 6 Coin 5 1.0 0.0 Coin 0 0.0 0.0 1 2.0
+Plafond 0 Mur 5 Coin 4 1.0 1.0 Coin 5 1.0 0.0 1 2.0 Mur 6 Coin 5 1.0 0.0 Coin 0 0.0 0.0 1 2.0 0
+Plafond 1 Mur 3 Coin 3 1.0 2.0 Coin 4 1.0 1.0 4 2.0 Mur 4 Coin 4 1.0 1.0 Coin 1 0.0 1.0 0 2.0 2
+Sol 0 Mur 0 Coin 0 0.0 0.0 Coin 1 0.0 1.0 0 2.0 Mur 4 Coin 4 1.0 1.0 Coin 1 0.0 1.0 0 2.0 16
+Sol 1 Mur 1 Coin 1 0.0 1.0 Coin 2 0.0 2.0 1 2.0 Mur 2 Coin 2 0.0 2.0 Coin 3 1.0 2.0 0 2.0 16
