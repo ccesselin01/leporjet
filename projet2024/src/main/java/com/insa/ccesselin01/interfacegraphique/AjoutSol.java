@@ -191,10 +191,10 @@ public class AjoutSol extends Application {
             double surface ;
             
             if (mur1.longueur()==mur2.longueur()) {
-                surface  = mur1.surface()*mur3.surface();
+                surface  = mur1.longueur()*mur3.longueur();
             } else {
             
-                surface = mur1.surface()*mur2.surface();
+                surface = mur1.longueur()*mur2.longueur();
             }
 
             double cout = surface * revetement.getPrixunitaire();
