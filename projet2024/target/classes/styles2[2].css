@@ -1,0 +1,29 @@
+/* Positionnement des éléments dans SceneSecond */
+
+/* Alignement des éléments au centre de la scène */
+.root {
+    -fx-alignment: center;
+}
+
+/* Style pour les radio boutons */
+.radio-button {
+    -fx-padding: 5px;
+}
+
+/* Style pour les labels */
+.label {
+    -fx-padding: 5px;
+}
+
+/* Style pour les textfields */
+.text-field {
+    -fx-padding: 5px;
+    -fx-pref-width: 150px; /* Largeur préférée */
+}
+
+/* Style pour le bouton Valider */
+#submit-button {
+    -fx-padding: 10px 20px; /* Espacement interne */
+    -fx-font-size: 14px;
+}
+
