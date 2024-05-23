@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import com.insa.ccesselin01.calcul.Revetement;
 import com.insa.ccesselin01.calcul.RevetementDatabase;
+import com.insa.ccesselin01.calcul.TexteReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -117,7 +118,7 @@ public class Ouverture {
         
     }
 
-    public void openProjetAncien(ActionEvent t) {
+    /*public void openProjetAncien(ActionEvent t) {
         FileChooser chooser = new FileChooser();
         File f = chooser.showOpenDialog(this.secondStage);
         if (f != null) {
@@ -133,5 +134,40 @@ public class Ouverture {
                 //
             }
         }
+    }*/
+    public void openProjetAncien(ActionEvent t) {
+    FileChooser chooser = new FileChooser();
+    File f = chooser.showOpenDialog(this.secondStage);
+    if (f != null) {
+        try {
+            TexteReader texteReader = new TexteReader();
+            texteReader.readTextFile(f.getAbsolutePath());
+            // Après avoir ouvert le projet, démarrer la fenêtre de saisie manuelle
+            startManualInputWindows();
+        } catch (Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erreur");
+            alert.setHeaderText("Problème durant la sauvegarde");
+            alert.setContentText(ex.getLocalizedMessage());
+
+            alert.showAndWait();
+        }
     }
+}
+
+
+private void startManualInputWindows() {
+    // Créez une instance de la classe pour la saisie manuelle des coins, murs, etc.
+    Stage manualInputStage = new Stage();
+    AjoutCoin ajoutCoin = new AjoutCoin();
+    AjoutMur ajoutMur = new AjoutMur();
+    // Ajoutez d'autres classes pour la saisie manuelle des autres objets si nécessaire
+
+    // Appelez la méthode start pour afficher la fenêtre de saisie manuelle
+    ajoutCoin.start(manualInputStage);
+    ajoutMur.start(manualInputStage);
+    // Appelez la méthode show pour afficher la fenêtre
+    manualInputStage.show();
+}
+
 }

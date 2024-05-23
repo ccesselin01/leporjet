@@ -11,11 +11,10 @@ import java.io.IOException;
 
 public class TexteReader {
        
-    public void TexteReader(String filename) {
+    public void readTextFile(String filename) {
   
         try(BufferedReader reader = new BufferedReader(new FileReader(filename)))
         {
-            
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(" ; ");
