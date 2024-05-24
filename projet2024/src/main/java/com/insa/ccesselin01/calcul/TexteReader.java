@@ -35,7 +35,7 @@ public class TexteReader {
                        int nbportes = Integer.parseInt(fields[4]);
                        int nbfenetre = Integer.parseInt(fields[5]);
                        int revetement_mur = Integer.parseInt(fields[6]);
-                       int hauteur = Integer.parseInt(fields[7]);
+                       double hauteur = Integer.parseInt(fields[7]);
                        //Mur m = new Mur(Coin.getCoin(debut), Coin.getCoin(fin), RevetementDatabase.get_Revetement(revetement_mur),hauteur );
                        Mur m = new Mur(id, Coin.getCoin(debut),Coin.getCoin(fin),nbportes, nbfenetre, RevetementDatabase.get_Revetement(revetement_mur),hauteur);
                     }
