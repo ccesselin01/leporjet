@@ -159,19 +159,12 @@ public class Ouverture {
 private void startManualInputWindows() {
     // Créez une instance de la classe pour la saisie manuelle des coins, murs, etc.
     Stage manualInputStage = new Stage();
-    //AjoutCoin ajoutCoin = new AjoutCoin();
-    //AjoutMur ajoutMur = new AjoutMur();
     RenseignementDevis rdevis = new RenseignementDevis();
-    // Ajoutez d'autres classes pour la saisie manuelle des autres objets si nécessaire
-
     // Appelez la méthode start pour afficher la fenêtre de saisie manuelle
-    //nouveauprojet.start(manualInputStage);
-    //ajoutCoin.start(manualInputStage);
-    //ajoutMur.start(manualInputStage);
     rdevis.start(manualInputStage);
     // Appelez la méthode show pour afficher la fenêtre
     manualInputStage.show();
-    secondStage.close();
+    secondStage.close(); // ferme le stage avec les deux boutons
 }
 
 }
