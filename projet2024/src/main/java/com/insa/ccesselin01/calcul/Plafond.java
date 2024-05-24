@@ -39,10 +39,11 @@ public class Plafond {
         plafondMap.put(this.idplafond, this);
     }
 
-    public Plafond(int idplafond, Sol s, Revetement revetement) {
+    public Plafond(int idplafond, Sol s, Revetement revetement) { //textreader
         this.s = s;
         this.idplafond = idplafond;
         this.revetement = revetement;
+        plafondMap.put(this.idplafond, this);
     }
     
     /*public double surface() 

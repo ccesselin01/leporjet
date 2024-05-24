@@ -33,6 +33,7 @@ public class Coin
         this.idCoin = idCoin;
         this.x = x;
         this.y = y;
+        coinMap.put(this.getIdCoin(), this);
     }
     
     public Coin ()
