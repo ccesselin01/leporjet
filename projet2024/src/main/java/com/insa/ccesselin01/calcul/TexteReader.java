@@ -35,10 +35,15 @@ public class TexteReader {
                        int nbportes = Integer.parseInt(fields[4]);
                        int nbfenetre = Integer.parseInt(fields[5]);
                        int revetement_mur = Integer.parseInt(fields[6]);
-                       double hauteur = Integer.parseInt(fields[7]);
+                       double hauteur = Double.parseDouble(fields[7]);
+                       //idR = identifiant du revetment 
+                       //int idR = (RevetementDatabase.get_Revetement(revetement_mur)).getId();
+                       //int idR = Revetement.getId();
                        //Mur m = new Mur(Coin.getCoin(debut), Coin.getCoin(fin), RevetementDatabase.get_Revetement(revetement_mur),hauteur );
                        Mur m = new Mur(id, Coin.getCoin(debut),Coin.getCoin(fin),nbportes, nbfenetre, RevetementDatabase.get_Revetement(revetement_mur),hauteur);
-                    }
+                    //Mur m = new Mur(id, Coin.getCoin(debut),Coin.getCoin(fin),nbportes, nbfenetre, idR,hauteur);
+                    
+                    }  
                     else {
                             if ("Sol".equals(mot_cle)){
                                 int id = Integer.parseInt(fields[1]); 

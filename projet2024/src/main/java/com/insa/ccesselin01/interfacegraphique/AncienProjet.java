@@ -65,32 +65,22 @@ public class AncienProjet extends Application {
         projectLabel.setFont(labelFont);
         levelLabel.setFont(labelFont);
 */
-        
-
         // Création du conteneur principal VBox
         VBox vbCenter = new VBox (this.bOuvrir);
         vbCenter.setSpacing(20);
         vbCenter.setAlignment(Pos.CENTER);
          
-        
         Scene scene = new Scene(vbCenter,900, 600);
         
         // Lier la largeur des boutons à la largeur de la fenêtre
-        
         bOuvrir.prefWidthProperty().bind(scene.widthProperty().divide(2));
 
         // Lier la hauteur des boutons à la hauteur de la fenêtre
-        
         bOuvrir.prefHeightProperty().bind(scene.heightProperty().divide(6));
 
         // Configuration de la scène et affichage de la fenêtre
-        
-        
         bOuvrir.styleProperty().bind(Bindings.concat("-fx-font-size: ", bOuvrir.widthProperty().divide(15)));
-        
-
-        // Ajustement des composants avec la fenêtre
-        
+       // Ajustement des composants avec la fenêtre
 /*
         nameLabel.prefWidthProperty().bind(scene.widthProperty().multiply(0.3));
         nameField.prefWidthProperty().bind(scene.widthProperty().multiply(0.6));

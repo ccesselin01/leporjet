@@ -77,7 +77,7 @@ public class Revetement {
     public void setDesignation(String Designation) {
         this.designation = Designation;
     }
-
+    
     public int getId() {
         return idRevetement;
     }
@@ -120,6 +120,9 @@ public class Revetement {
     public String toString() {
         return "Revetement{" + "idRevetement=" + idRevetement + ", designation=" + designation + ", prixunitaire=" + prixunitaire + ", poursol=" + poursol + ", pourmur=" + pourmur + ", pourplafond=" + pourplafond + '}';
     }
+    //public static Revetement getIdrev(int idRevetement) { // TEST on remplace les listes
+     //   return idrevMap.get(idRevetement) ;
+    //}
     
 }
 

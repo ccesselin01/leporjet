@@ -16,14 +16,20 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class RevetementDatabase {
-        
-    private static List<Revetement> revetements = new ArrayList<Revetement>() ;
+    private static Map<Integer, Revetement> revetements = new HashMap<>();
+
+    public static Revetement get_Revetement(int id) { //TEST
+        return revetements.get(id);
+    } 
+    //TESTprivate static List<Revetement> revetements = new ArrayList<Revetement>() ;
     //private int nextId = 1; // le prochain identifiant à utiliser
-    
+    //public static Map<Integer, Revetement> idrevMap = new HashMap<>() ; TEST
     
     /*public RevetementDatabase() {
         // Ajouter des exemples de produits à la base de données
@@ -31,7 +37,6 @@ public class RevetementDatabase {
         
     }*/ //à enlever?
     public static void loadFromFile (String filename) throws IOException {
-        
         
         try(BufferedReader reader = new BufferedReader(new FileReader(filename)))
         {
@@ -46,7 +51,9 @@ public class RevetementDatabase {
                 boolean pourPlafond = fields[4].equals("1");
                 double prixUnitaire = Double.parseDouble(fields[5]);
                 //revetements.add(new Revetement(denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
-                revetements.add(new Revetement(id,denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
+                //TESTrevetements.add(new Revetement(id,denomination, pourSol, pourMur, pourPlafond, prixUnitaire));
+                Revetement rev = new Revetement(id, denomination, pourSol, pourMur, pourPlafond, prixUnitaire);
+                revetements.put(id, rev); //TEST
                 System.out.println(" Lecture faite ");
             }
             // ERREUR : le sol est avant le mur c pas bon??
@@ -59,23 +66,38 @@ public class RevetementDatabase {
         
     }
     
-    public static Revetement get_Revetement(int IDrevetement)
+    /*public static Revetement get_Revetement(int IDrevetement) TEST
     {
         return revetements.get(IDrevetement);
-    }
+        
+    }*/
     
     
-    public void saveToFile(String filename) throws IOException {
+    /*public void saveToFile(String filename) throws IOException { TEST
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             for (Revetement revetement : revetements) {
                 writer.write(revetement.getId() + ";" + revetement.getDesignation() + ";" + revetement.getPrixunitaire() + ";" + revetement.isPourSol() + ";" + revetement.isPourMur() + ";" + revetement.isPourPlafond());
                 writer.newLine();
             }
         }
+    }*/
+    public void saveToFile(String filename) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            for (Map.Entry<Integer, Revetement> entry : revetements.entrySet()) {
+                Revetement revetement = entry.getValue();
+                writer.write(revetement.getId() + ";" + revetement.getDesignation() + ";" + revetement.getPrixunitaire() + ";" + (revetement.isPourSol() ? "1" : "0") + ";" + (revetement.isPourMur() ? "1" : "0") + ";" + (revetement.isPourPlafond() ? "1" : "0"));
+                writer.newLine();
+            }
+            System.out.println("Données enregistrées avec succès dans le fichier : " + filename);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l'enregistrement dans le fichier : " + e.getMessage());
+        }
     }
     
-    public List<Revetement> getRevetements() {
+   /* public List<Revetement> getRevetements() {
         return revetements;
-    }
-
+    }*/
 }
+
+
+

@@ -53,8 +53,6 @@ public class Ouverture {
                  System.out.println( "Erreur :le fichier n’existe pas!\n "+err);}
                  catch (IOException err){
                  System.out.println(" Erreur :\n "+err);}
-                 
-                
                 
              }
             
@@ -141,6 +139,8 @@ public class Ouverture {
     if (f != null) {
         try {
             TexteReader texteReader = new TexteReader();
+            // on charge la liste des revetements avant
+            Revetement.loadRevetement();
             texteReader.readTextFile(f.getAbsolutePath());
             // Après avoir ouvert le projet, démarrer la fenêtre de saisie manuelle
             startManualInputWindows();
