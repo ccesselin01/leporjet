@@ -76,7 +76,10 @@ public class TexteReader {
                         }
                     else { // à continuer
                                 if ("Piece".equals(mot_cle)){
-                                    int id = Integer.parseInt(fields[1]);
+                                    int idpiece = Integer.parseInt(fields[1]);
+                                    int sol = Integer.parseInt(fields[2]);
+                                    int plafond = Integer.parseInt(fields[3]);
+                                    Piece piece = new Piece (idpiece, Sol.getSol(sol),Plafond.getPlafond(plafond));
                                     //Mur[] murs = ;
                                 nb_pieces = nb_pieces + 1;
                                 }

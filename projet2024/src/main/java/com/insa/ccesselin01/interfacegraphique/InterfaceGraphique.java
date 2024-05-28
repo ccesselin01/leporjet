@@ -198,8 +198,8 @@ public class InterfaceGraphique extends Application {
                 //piecesMap.put(nomPiece, pieceDescription);
                 
                 System.out.println(pieceDescription);
-                
-                Piece p = new Piece(Sol.getSol(sol).getM1(),Sol.getSol(sol).getM2(),Sol.getSol(sol).getM3(),Sol.getSol(sol).getM4(),Sol.getSol(sol),Plafond.getPlafond(plafond),nomPiece);
+                Piece p = new Piece (Sol.getSol(sol), Plafond.getPlafond(plafond));
+                //Piece p = new Piece(Sol.getSol(sol).getM1(),Sol.getSol(sol).getM2(),Sol.getSol(sol).getM3(),Sol.getSol(sol).getM4(),Sol.getSol(sol),Plafond.getPlafond(plafond),nomPiece);
 
                 // Mise à jour des listes déroulantes
                 //updateComboBoxes();

@@ -36,7 +36,7 @@ public class Appartement {
         appartementMap.put(this.idAppart, this);
     }
     
-    public static void addPiece (int idApt, Piece piece) {
+    public static void addPiece (int idApt, Piece piece) {//cf interface graphique ajouter
 
         appartementMap.get(idApt).setPieces(piece);
         
@@ -69,4 +69,10 @@ public class Appartement {
     public static Map<Integer, Appartement> getAppartementMap() {
         return appartementMap;
     }
+
+    @Override
+    public String toString() {
+        return "Appartement ; " + idAppart + " ; " + pieces + '}';
+    }
+    
 }

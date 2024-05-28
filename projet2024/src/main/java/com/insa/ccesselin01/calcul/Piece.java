@@ -34,6 +34,20 @@ public class Piece {
         this.plafond = plafond;
         pieceMap.put(this.getIdPiece(), this);
     }
+
+    public Piece(int idPiece, Sol sol, Plafond plafond) {
+        this.idPiece = idPiece;
+        this.sol = sol;
+        this.plafond = plafond;
+        pieceMap.put(this.getIdPiece(), this);
+    }
+    
+    public Piece (Sol sol, Plafond plafond){
+        this.idPiece = next_piece++ ;
+        this.sol = sol ;
+        this.plafond = plafond;
+        pieceMap.put(this.getIdPiece(), this);
+    }
     
        
     public double surface () 
