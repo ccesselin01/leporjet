@@ -2,14 +2,18 @@ Devis de revêtements
 
 ______________________________________________________________________
 
-Revêtement : Liege     Coût : 67,82 euros
+Revêtement : Peinture     Coût : 179,40 euros
 
-Revêtement : Peinture     Coût : 219,66 euros
+Revêtement : Liege     Coût : 152,40 euros
 
-Revêtement : Crepi     Coût : 105,77 euros
+Revêtement : Peinture     Coût : 1432,41 euros
 
-Revêtement : Vinyle Lino     Coût : 40,78 euros
+Revêtement : Marbre     Coût : 587,10 euros
+
+Revêtement : Vinyle Lino     Coût : 141,30 euros
+
+Revêtement : Lambris     Coût : 303,60 euros
 
 ______________________________________________________________________
 
-Coût total : 434,02 euros
+Coût total : 2796,21 euros

@@ -60,7 +60,7 @@ public class TextWriter {
                 Integer idCoin = entry.getKey();
                 Coin coinsauvegarde = entry.getValue();
 
-                printWriter.print(" " +coinsauvegarde.toString()); // cf classe Coin
+                printWriter.print(coinsauvegarde.toString()); // cf classe Coin
                 printWriter.println();
             }
             for (Map.Entry<Integer, Mur> entry : Mur.getmurMap().entrySet()) {
@@ -73,7 +73,7 @@ public class TextWriter {
             for (Map.Entry<Integer, Sol> entry : Sol.getSolMap().entrySet()) {
                 Integer idSol = entry.getKey();
                 Sol solsauvegarde = entry.getValue();
-
+                System.out.println(solsauvegarde.getRevetement());
                 printWriter.print(solsauvegarde.toString());
                 printWriter.println();
             }

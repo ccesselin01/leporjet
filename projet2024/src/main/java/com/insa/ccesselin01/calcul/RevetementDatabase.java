@@ -56,6 +56,7 @@ public class RevetementDatabase {
                 revetements.put(id, rev); //TEST
                 System.out.println(" Lecture faite ");
             }
+            System.out.println(revetements.get(48));
             // ERREUR : le sol est avant le mur c pas bon??
  
         }
